@@ -1,15 +1,8 @@
 const pkg = require('./package')
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/projects/nuxt-test/'
-  }
-} : {}
-
 
 module.exports = {
   mode: 'universal',
-  ...routerBase,
   /*
   ** Headers of the page
   */
