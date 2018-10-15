@@ -13,6 +13,7 @@
 
 <script>
 import axios from 'axios'
+import conf from '~/plugins/firebase.js'
 export default {
   async asyncData ({ params }) {
     let { data }  = await axios.get('https://jsonplaceholder.typicode.com/posts')
