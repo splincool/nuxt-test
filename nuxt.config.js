@@ -1,5 +1,9 @@
 const pkg = require('./package')
-
+export default {
+  router: {
+    middleware: 'stats'
+  }
+}
 module.exports = {
   mode: 'universal',
   /*
@@ -21,7 +25,9 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#31b888' },
-
+  router: {
+    middleware: 'stats'
+  },
   /*
   ** Global CSS
   */
