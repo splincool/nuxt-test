@@ -4,7 +4,7 @@
       :key="post.id"
       class="post-box">
       <h1>
-        <nuxt-link :to="'/posts/' + post.id">{{post.title}}</nuxt-link>
+        <nuxt-link :to="'/post/' + post.id">{{post.title}}</nuxt-link>
       </h1>
       <p>{{post.body}}</p>
     </div>
