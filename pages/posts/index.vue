@@ -3,7 +3,9 @@
     <div v-for="post in posts" 
       :key="post.id"
       class="post-box">
-      <h1>{{post.title}}</h1>
+      <h1>
+        <nuxt-link :to="'/posts/' + post.id">{{post.title}}</nuxt-link>
+      </h1>
       <p>{{post.body}}</p>
     </div>
   </div>
@@ -14,7 +16,6 @@ import axios from 'axios'
 export default {
   async asyncData ({ params }) {
     let { data }  = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    console.log(data)
     return { posts: data }
   }
 }
